@@ -42,7 +42,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|shop_name|text|null: false|
+|shop_address|text|null: false|
+|description|text||
 |image|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
@@ -52,12 +54,13 @@ Things you may want to cover:
 - belongs_to :user
 
 
-## commentsテーブル
+## recomenndsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true, unique: true|
+|recommend_level|integer|null: false|
+|content|text||
 
 ### Association
 - belongs_to :post
