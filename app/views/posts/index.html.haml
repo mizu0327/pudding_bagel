@@ -1,0 +1,24 @@
+.header
+  .header__leftpart
+    .header__leftpart__icons
+      .header__leftpart--pudding
+        = f.label :pudding, class: 'pudding' do
+          %img(src="" alt="")/
+      .header__leftpart--copy
+        %img(src="" alt="")/
+  .header__rightpart
+    .header__rightpart__icons
+      .header__rightpart--heart
+        =link_to "#" do
+          = icon('fa', 'heart', class: 'like')
+      .header__rightpart--person
+        =link_to current_user_path do
+          = icon('fa', 'user', class: 'profile')
+
+.body
+  .body__leftpart
+    -# posts
+  .body__rightpart
+    .body__rightpart__search
+      .body__rightpart__search__title
+      -# フォームつくる

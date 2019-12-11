@@ -1,3 +1,35 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 77px;
+  padding: 26px 20px;
+  border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+  &__leftpart {
+    &__icons {
+
+    }
+  }
+  &__rightpart {
+    &__icons {
+
+    }
+  }
+}
+
+.body {
+  &__leftpart {
+  }
+  &__rightpart {
+    &__search {
+      &__title {
+
+      }
+    }
+  }
+}
