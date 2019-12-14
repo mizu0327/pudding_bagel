@@ -1,8 +1,10 @@
 .main-contents
   .main-contents__images
-    .main-contents__images--pudding
-      -# =link_to 
-    .main-contents__images--bagel
-      -# =link_to 
+    = link_to 'posts#index', class: "home_pudding_link" do
+      = image_tag "home_pudding.JPG", alt: "homeプリン", class: "home_pudding_img"
+    = link_to 'posts#index', class: "home_bagel_link" do
+      = image_tag "home_bagel.jpg", alt: "homeベーグル", class: "home_bagel_img"
   .main-contents__maincopy
-    メインコピー
+    プリンが／ベーグルが
+    %br/
+    たべたい

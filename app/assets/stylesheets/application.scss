@@ -1,3 +1,9 @@
 @import "./reset";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
+@import "./home";
+
+@font-face{
+  font-family: "karakaze";
+  src: font-url('karakaze-M.otf') format('truetype');
+}

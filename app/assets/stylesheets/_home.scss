@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-contents {
+  &__images {
+    position: absolute;
+    display: flex;
+    .home_pudding_link {
+      width: 50%;
+      height: 840px;
+    }
+    .home_pudding_img {
+      width: 100%;
+      height: 840px;
+      object-fit: cover;
+      object-position:0% 90%;
+    }
+    .home_bagel_link {
+      width: 50%;
+      height: 840px;
+    }
+    .home_bagel_img {
+      width: 100%;
+      height: 840px;
+      object-fit: cover;
+    }
+  }
+  &__maincopy {
+    position: relative;
+    font-family: "karakaze";
+    font-size: 100px;
+    text-align: center;
+    margin-top: 240px;
+    color: white;
+  }
+}
