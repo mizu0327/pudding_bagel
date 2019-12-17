@@ -1,24 +1,73 @@
 .header
   .header__leftpart
-    .header__leftpart__icons
-      .header__leftpart--pudding
-        = f.label :pudding, class: 'pudding' do
-          %img(src="" alt="")/
-      .header__leftpart--copy
-        %img(src="" alt="")/
+    .header__leftpart__pudding
+      = link_to 'home#index', class: "pudding" do
+        = image_tag "pudding.png", alt: "プリンアイコン", class: "pudding_icon"
+    .header__leftpart__copy
+      プリンがたべたい
   .header__rightpart
-    .header__rightpart__icons
-      .header__rightpart--heart
-        =link_to "#" do
-          = icon('fa', 'heart', class: 'like')
-      .header__rightpart--person
-        =link_to current_user_path do
-          = icon('fa', 'user', class: 'profile')
+    .header__rightpart__heart
+      =link_to "#" do
+        = icon('far', 'heart', class: 'like')
+    .header__rightpart__person
+      =link_to current_user do
+        = icon('far', 'user', class: 'profile')
 
 .body
   .body__leftpart
-    -# posts
+    .body__leftpart__shop
+      .body__leftpart__shop__info
+        .body__leftpart__shop__info__name
+          Yakigashiya Lucca
+        .body__leftpart__shop__info__image
+          = image_tag "post1.jpeg", alt: "yakigashiyaLucca", class: "pudding_post"
+      .body__leftpart__shop__description
+        .body__leftpart__shop__description__value
+          .body__leftpart__shop__description__value__fav
+            お気に入り：556
+          .body__leftpart__shop__description__value__recommend
+            おすすめ：24
+        .body__leftpart__shop__description__address
+          大阪府豊中市本町1-2-46
+        .body__leftpart__shop__description__tel
+          TEL：090-7867-0205
+        .body__leftpart__shop__description__time
+          営業時間：10～18時(売り切れ次第終了)
+        .body__leftpart__shop__description__date
+          定休日：日・月曜、祝日
+        .body__leftpart__shop__description__link
+          =link_to "https://tabelog.com/osaka/A2706/A270601/27095615/"
+        .body__leftpart__shop__description__tags
+          != "#大阪 #固め #苦め"
+        .body__leftpart__shop__description__comments
+
   .body__rightpart
     .body__rightpart__search
+      = icon('fas', 'search', class: 'search')
       .body__rightpart__search__title
-      -# フォームつくる
+        さがす
+    .body__rightpart__searchbox
+      = form_with(url: "#", local: true, method: :get, class: "search-form") do |f|
+        = f.text_field :keyword, placeholder: "キーワードを入力", class: "search-input"
+    .body__rightpart__example
+      .body__rightpart__example__site
+        .body__rightpart__example__site__title
+          ▼場所でさがす
+        .body__rightpart__example__site__element
+          != "#大阪 #京都 #神戸"
+      .body__rightpart__example__taste
+        .body__rightpart__example__taste__title
+          ▼食感でさがす
+        .body__rightpart__example__taste__element
+          != "#固め #柔らかめ"
+      .body__rightpart__example__taste
+        .body__rightpart__example__taste__title
+          ▼味でさがす
+        .body__rightpart__example__taste__element
+          != "#苦め #甘め"
+    .body__rightpart__request
+      = icon('far', 'edit', class: 'request')
+      .body__rightpart__request__title
+        リクエストする
+    .body__rightpart__request_btn
+      = link_to "リクエストページを開く", '#', class: "btn requestbtn"

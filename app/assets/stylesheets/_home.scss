@@ -3,6 +3,15 @@
   overflow: hidden;
 }
 
+@mixin imagemoving() {
+  display: block;
+  transition-duration: 0.3s;
+  &:hover {
+    transform: scale(1.1);	/*画像の拡大率*/
+    transition-duration: 0.6s;	/*変化に掛かる時間*/
+  }
+}
+
 .main-contents {
   &__images {
     position: absolute;
@@ -16,6 +25,8 @@
       height: 840px;
       object-fit: cover;
       object-position:0% 90%;
+      overflow: hidden;
+      @include imagemoving();
     }
     .home_bagel_link {
       width: 50%;
@@ -25,6 +36,8 @@
       width: 100%;
       height: 840px;
       object-fit: cover;
+      overflow: hidden;
+      @include imagemoving();
     }
   }
   &__maincopy {

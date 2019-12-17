@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+$fontsize_small: 15px;
+$fontsize_medium: 18px;
+
+.header {
+  height: 77px;
+  width: 100%;
+  padding: 26px 50px;
+  border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  &__leftpart {
+    display: flex;
+    text-align: center;
+    .pudding_icon {
+      height: 26px;
+      width: 26px;
+      margin-right: 20px;
+    }
+    &__copy {
+      font-family: "karakaze";
+      font-size: 24px;
+      line-height: 20px;
+    }
+  }
+  &__rightpart {
+    display: flex;
+    .like {
+      font-size: 24px;
+      color: gray;
+      margin-right: 20px;
+      -webkit-text-stroke: 1px white
+    }
+    .profile {
+      font-size: 24px;
+      color: gray;
+      -webkit-text-stroke: 1px white
+    }
+  }
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 0px 100px 0px;
+  overflow: scroll;
+  &__leftpart {
+    width: calc(100vw - 450px);
+    border-right: 1px solid rgba(var(--b6a,219,219,219),1);
+    &__shop {
+      display: flex;
+      padding: 10px 0px 70px;
+      &__info {
+        margin-right: 15px;
+        &__name {
+          font-family: "karakaze";
+          font-size: 50px;
+        }
+        &__image {
+          height: 550px;
+          width: 550px;
+        }
+      }
+      &__description {
+        width: 350px;
+        margin-top: 60px;
+        font-size: $fontsize_small;
+        word-wrap: break-word;
+        line-height: 30px;
+        &__value {
+          display: flex;
+          font-size: $fontsize_small;
+          color: #f2785fff;
+          font-family: ‘Noto Sans JP’, sans-serif;
+          &__fav {
+            margin-right: 17px;
+          }
+        }
+        &__address {
+          font-size: $fontsize_medium;
+        }
+        &__link {
+          text-decoration: none;
+          color: gray;
+        }
+        &__tags {
+          color: gray;
+        }
+      }
+    }
+  }
+  &__rightpart {
+    width: 350px;
+    padding-top: 25px;
+    padding-left: 15px;
+    &__search {
+      display: flex;
+      .search {
+        font-size: 30px;
+        color: gray;
+        -webkit-text-stroke: 2px white;
+        margin-right: 5px;
+      }
+      &__title {
+        font-family: "karakaze";
+        font-size: 35px;
+        line-height: 20px;
+      }
+    }
+    &__searchbox {
+      margin-top: 15px;
+      .search-input {
+        height: 40px;
+        width: 280px;
+        border-radius: 10px;
+        font-size: 13px;
+      }
+    }
+    &__example {
+      margin-top: 20px;
+      line-height: 30px;
+      &__site {
+        &__title {
+          font-size: $fontsize_medium;
+        }
+        &__element {
+          font-size: $fontsize_small;
+          color: gray;
+        }
+      }
+      &__taste {
+        margin-top: 10px;
+        &__title {
+          font-size: $fontsize_medium;
+        }
+        &__element {
+          font-size: $fontsize_small;
+          color: gray;
+        }
+      }
+    }
+    &__request {
+      margin-top: 50px;
+      display: flex;
+      .request {
+        font-size: 30px;
+        color: gray;
+        -webkit-text-stroke: 1px white;
+        margin-right: 5px;
+      }
+      &__title {
+        font-family: "karakaze";
+        font-size: 35px;
+        line-height: 20px;
+      }
+    }
+    &__request_btn {
+      margin-top: 15px;
+      height: 40px;
+      width: 280px;
+      background-color: white;
+      border-radius: 10px;
+      border: gray 1px solid;
+      .btn {
+        color: gray;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 40px;
+        
+      }
+    }
+  }
+}
